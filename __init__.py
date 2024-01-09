@@ -8,7 +8,7 @@ if not sys.platform.startswith('linux'):
     log(f"Not a Linux system or supported distribution. You are on {Fore.GREEN}{sys.platform}{Fore.RESET}.", parent=parents.ERROR, time=False)
     exit(0)
 else:
-    log(f"Running on a Linux system or supported distribution. You are on {Fore.GREEN}{sys.platform.partition('linux')[1]}{Fore.RESET} bit.", parent=parents.SIGNAL, time=False)
+    log(f"Running on a Linux system or supported distribution. You are on {Fore.GREEN}{sys.platform.split('linux')[1]}{Fore.RESET} bit.", parent=parents.SIGNAL, time=False)
 
 log("Starting AmikaPi server...", parent=parents.AMIKAPI)
 try:
