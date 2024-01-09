@@ -9,7 +9,7 @@ if not sys.platform.startswith('linux'):
     exit(0)
 else:
     s = f'{sys.platform.split("linux")[1]} bit'
-    log(f"Running on a Linux system or supported distribution. You are on {Fore.GREEN}{s if sys.platform.split('linux')[1] or sys.platform.split(' ')[0].lower() == 'linux' else ''}{Fore.RESET}.", parent=parents.SIGNAL, time=False)
+    log(f"Running on a Linux system or supported distribution. You are on {Fore.GREEN}{s if (sys.platform.split('linux')[1] or not sys.platform.split(' ')[0].lower() == 'linux') else ''}{Fore.RESET}.", parent=parents.SIGNAL, time=False)
 
 log("Starting AmikaPi server...", parent=parents.AMIKAPI)
 try:
