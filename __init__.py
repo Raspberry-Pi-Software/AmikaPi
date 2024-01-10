@@ -61,9 +61,11 @@ try:
     Thread(target=threaded_terminal).start()
 except KeyboardInterrupt: print("Exiting...");exit(0)
 
-sleep(20)
+sleep(10)
 log("AmikaPi daemon is running...", parent=parents.AMIKAPI)
 sleep(4)
+
+from distribution.stable import main
 
 try:
     while True:
